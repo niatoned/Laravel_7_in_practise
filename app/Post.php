@@ -12,4 +12,14 @@ class Post extends Model
     {
         return $this->belongsTo('App\Post');
     }
+
+    public function getTitleAttribute($value)
+    {
+        return ucfirst($value);
+    }
+
+    public function getContentAttribute($value)
+    {
+        return $value;
+    }
 }
